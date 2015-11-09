@@ -185,11 +185,13 @@ site controlled with Auth and Acl, we will set them up in
             //Configure AuthComponent
             $this->Auth->loginAction = array(
               'controller' => 'users',
-              'action' => 'login'
+              'action' => 'login',
+              'admin' => false
             );
             $this->Auth->logoutRedirect = array(
               'controller' => 'users',
-              'action' => 'login'
+              'action' => 'login',
+              'admin' => false
             );
             $this->Auth->loginRedirect = array(
               'controller' => 'posts',
